@@ -1,6 +1,11 @@
 # Mini project
 
-Starter kit for mini project 
+Starter kit for mini project
+
+## Instructions
+
+1. Clone this repo
+2. Read 👇
 
 ## purpouse
 
