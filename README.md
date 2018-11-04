@@ -7,7 +7,7 @@ Starter kit for mini project
 1. Clone this repo
 2. Read 👇
 
-## purpouse
+## purpose
 
 - Practice with react, lifecycle, and state.
 
