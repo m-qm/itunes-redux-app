@@ -26,9 +26,10 @@ Starter kit for mini project
 
 ## Backend
 
-If you are programming your own API just remember 
+If you are programming your own API just remember
 
-- modify the middleware errors (`app.js`)
-- add cors package in order to prevent CORS
-- delete all the files related to views.
+- modify the middleware errors (`app.js`) 
+- add cors package in order to prevent CORS 
+- delete all the files related to views. 
 
+[CheatSheet](https://github.com/Ironhack-PartTime-BCN/react-course/blob/master/cheatsheet/backend-setup.md)
