@@ -11,6 +11,8 @@ Starter kit for mini project
 
 - Practice with react, lifecycle, and state.
 
+> Don't spend too much time doing HTML - CSS 
+
 ## Requirements
 
 - 4 routes 
@@ -19,7 +21,7 @@ Starter kit for mini project
   - `/signup` -> just display a form with two input `username` and `password`
   - `/xxxx` -> In this route you should connect to an API remember, create a service class
 
-- It should connect to and API. it doesn't matter if is an external API or you create your backend.
+- It should connect to an API. it doesn't matter if is an external API or you create one.
 
 
 ## Backend
