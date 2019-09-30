@@ -1,0 +1,86 @@
+.SearchTable {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+.SearchTableTitle {
+  width: 25%;
+  min-width: 200px;
+}
+
+.SearchTableArtist {
+  width: 20%;
+  min-width: 150px;
+}
+
+.SearchTableAlbum {
+  width: 25%;
+  min-width: 200px;
+}
+
+.SearchTableRelease {
+  width: 5%;
+  min-width: 150px;
+}
+
+.SearchTableCover {
+  width: 5%;
+  min-width: 100px;
+}
+
+.SearchTableLenght {
+  width: 5%;
+  min-width: 100px;
+}
+
+.SearchTableGenre {
+  width: 10%;
+  min-width: 150px;
+}
+
+.SearchTablePrice {
+  width: 5%;
+  min-width: 100px;
+}
+
+@media (max-width: 1150px) {
+  .SearchTablePrice {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .SearchTableGenre {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .SearchTableLenght {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .SearchTableCover {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .SearchTableRelease {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .SearchTableAlbum {
+    display: none;
+  }
+}
