@@ -97,16 +97,51 @@ class SearchTable extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isTable: true
+      isTable: true,
+      currentPage: 1,
+      itemsPerPage: 20
     };
   }
   handleTableSwitch() {
     this.setState({ isTable: !this.state.isTable });
   }
 
+  handleClick = event => {
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
+  };
+
   render() {
     const { isLoading, dataSource } = this.props;
     const isTable = this.state.isTable;
+    const { currentPage, itemsPerPage } = this.state;
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = dataSource.slice(indexOfFirstItem, indexOfLastItem);
+
+    const renderItems = currentItems.map((item, index) => (
+      <ArtistsCard key={index} {...item} />
+    ));
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(dataSource.length / itemsPerPage); i++) {
+      pageNumbers.push(i);
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <li
+          className="pagination-items"
+          key={number}
+          id={number}
+          onClick={this.handleClick}
+        >
+          {number}
+        </li>
+      );
+    });
+
+    console.log(renderItems);
     let table;
     let button;
     if (isTable) {
@@ -121,10 +156,9 @@ class SearchTable extends PureComponent {
     } else {
       table = (
         <div className="SearchTable">
-          <div className="ui link cards">
-            {dataSource.map((item, index) => (
-              <ArtistsCard key={index} {...item} />
-            ))}
+          <div className="ui link cards">{renderItems}</div>
+          <div className="pagination">
+            <ul className="page-numbers">{renderPageNumbers}</ul>
           </div>
         </div>
       );

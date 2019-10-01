@@ -48,7 +48,27 @@
   width: 5%;
   min-width: 100px;
 }
+.pagination {
+  display: inline-block;
+}
 
+.pagination-items {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: flex;
+  border: 1px solid #ddd;
+}
+
+li.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.ant-table-pagination.ant-pagination {
+  float: none;
+}
 @media (max-width: 1150px) {
   .SearchTablePrice {
     display: none;
