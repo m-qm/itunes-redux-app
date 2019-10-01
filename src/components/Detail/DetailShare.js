@@ -1,10 +1,8 @@
 import React from "react";
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   TwitterShareButton,
   FacebookIcon,
-  GooglePlusIcon,
   TwitterIcon
 } from "react-share";
 
@@ -19,11 +17,6 @@ const DetailShare = props => {
         className="DetailShareButton"
         children={<FacebookIcon size={48} round={true} />}
         quote={text}
-        url={url}
-      />
-      <GooglePlusShareButton
-        className="DetailShareButton"
-        children={<GooglePlusIcon size={48} round={true} />}
         url={url}
       />
       <TwitterShareButton

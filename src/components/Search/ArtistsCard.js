@@ -11,7 +11,7 @@ class ArtistsCard extends Component {
     };
   }
 
-  playVideo() {
+  playSong() {
     this.setState({
       isPreviewVisible: !this.state.isPreviewVisible,
       isPlaying: !this.state.isPlaying
@@ -34,7 +34,7 @@ class ArtistsCard extends Component {
             >
               <div
                 className="artists-preview"
-                onClick={this.playVideo.bind(this)}
+                onClick={this.playSong.bind(this)}
               >
                 {this.state.isPlaying ? "Stop" : "Preview"}
               </div>

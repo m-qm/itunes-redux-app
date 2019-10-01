@@ -1,4 +1,6 @@
 import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+
 import { connect } from "react-redux";
 import { Table } from "antd";
 import moment from "moment";
@@ -94,6 +96,18 @@ const columns = [
 ];
 
 class SearchTable extends PureComponent {
+  static contextTypes = {
+    router: PropTypes.object
+  };
+
+  goToDetail(id, dataSource) {
+    this.context.router.history.push({
+      pathname: "/detail",
+      search: `?id=${id}`,
+      state: { dataSource }
+    });
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -141,7 +155,6 @@ class SearchTable extends PureComponent {
       );
     });
 
-    console.log(renderItems);
     let table;
     let button;
     if (isTable) {
@@ -151,6 +164,11 @@ class SearchTable extends PureComponent {
           dataSource={dataSource}
           columns={columns}
           pagination={{ pageSize: 20 }}
+          onRow={record => {
+            return {
+              onClick: () => this.goToDetail(record.key, dataSource)
+            };
+          }}
         />
       );
     } else {
