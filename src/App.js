@@ -15,7 +15,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">Itunes Search</h1>
+            <h1 className="App-title">Find your music</h1>
           </header>
           <div className="App-body">
             <Router>
