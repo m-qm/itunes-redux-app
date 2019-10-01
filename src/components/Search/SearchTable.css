@@ -1,6 +1,4 @@
 .SearchTable {
-  padding: 5px;
-  margin: 10px;
   border-radius: 8px;
 }
 
@@ -64,7 +62,6 @@
 
 .pagination-items {
   color: black;
-  float: left;
   text-decoration: none;
   display: flex;
   border: 1px solid #ddd;
@@ -78,7 +75,6 @@
   vertical-align: middle;
   list-style: none;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
   border-radius: 4px;
   outline: 0;
   cursor: pointer;
@@ -94,6 +90,7 @@ li.active {
 }
 .switch-button {
   color: #fff;
+  margin-bottom: 8px;
   background-color: #1890ff;
   border-color: #1890ff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
