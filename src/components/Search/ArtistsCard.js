@@ -41,6 +41,7 @@ class ArtistsCard extends Component {
             </div>
           </div>
           <div className="artists-data">
+            <h2>{this.props.title}</h2>
             <h2>{this.props.artist}</h2>
             <h2>{this.props.album}</h2>
           </div>

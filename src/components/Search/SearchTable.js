@@ -131,7 +131,10 @@ class SearchTable extends PureComponent {
     }
     return (
       <div>
-        <button onClick={() => this.handleTableSwitch()}>Switch</button>
+        <button onClick={() => this.handleTableSwitch()}>
+          {" "}
+          {this.state.isTable ? "Switch to Grid View" : "Switch to Table View"}
+        </button>
         {table}
       </div>
     );
