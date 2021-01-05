@@ -5,7 +5,7 @@
   "author": "m-qm",
   "dependencies": {
     "antd": "^3.2.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "moment": "^2.21.0",
     "query-string": "^5.1.0",
     "react": "^16.2.0",
